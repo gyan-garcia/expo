@@ -3,15 +3,15 @@ import { View, StyleSheet, Image, Text } from 'react-native';
 
 import Colors from '../config/Colors'
 
-function Card(props) {
+function Card({title, subTitle, image}) {
     return (
         <View style={styles.container}>
             <Image style={styles.photo} 
-                source={require('../assets/jacket.jpg')}
+                source={image}
                 resizeMode="cover"/>
             <View style={styles.textContainer}>
-                <Text style={styles.description}>Black Jacket for sale!</Text>
-                <Text style={styles.price}>$100</Text>
+                <Text style={styles.description}>{title}</Text>
+                <Text style={styles.price}>{subTitle}</Text>
             </View>
         </View>
     );

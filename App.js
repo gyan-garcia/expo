@@ -2,6 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 //import { StyleSheet, Text, View } from 'react-native';
 
 import WelcomeScreen from './app/screens/WelcomeScreen';
+import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
+import ViewImageScreen from './app/screens/ViewImageScreen';
 //import AppButton from './app/components/AppButton'
 
 // Note, check that if I wanto to have an specific OS implementation for a components
@@ -16,7 +18,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function App() {
   return (
-    <WelcomeScreen/>
+    <ViewImageScreen/>
     
   );
 }

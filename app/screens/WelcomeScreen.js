@@ -18,7 +18,7 @@ function WelcomeScreen(props) {
             <Text style = {styles.text}>Sell what you don't need</Text>
         </View>
 
-        <Card/>
+        <Card title="Jacket for sale" subTitle="$100" image={require('../assets/jacket.jpg')}/>
         <AppButton text="LOGIN" color={Colors.primary}/>
         <AppButton text="SIGN UP" color={Colors.secondary}/>
         
