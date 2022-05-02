@@ -24,13 +24,12 @@ const styles = StyleSheet.create({
         height: 250,
         width: "100%",
         borderRadius: 15,
-        backgroundColor: Colors.white
+        backgroundColor: Colors.white, 
+        overflow: 'hidden' // With this property the child elements won't get out of the layout. 
     },
     photo:{
-        height: 190,
+        height: 200,
         width: "100%",
-        borderTopLeftRadius: 15,  // This is weird, I would asume the image would respect the radius of the parent
-        borderTopRightRadius: 15,
     },
     textContainer: {
         flex: 1,
@@ -42,6 +41,6 @@ const styles = StyleSheet.create({
     price: {
         margin: 1,
         color: Colors.secondary,
-        fontWeight: "700"
+        fontWeight: "bold"
     }
 })

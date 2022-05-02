@@ -2,24 +2,25 @@ import React from 'react';
 import { Image, Text, StyleSheet, View } from 'react-native';
 
 import Colors from '../config/Colors'
+import AppText from './AppText'
 
 /*
   
  */
 
-function UserCard(props) {
+function ListItem({image, title, subTitle}) {
     return (
         <View style={styles.container}>
-            <Image style={styles.image} source={require('../assets/mac-miller.jpg')} resizeMode="cover"/>
+            <Image style={styles.image} source={image} resizeMode="cover"/>
             <View style={styles.secondaryContainer}>
-                <Text style={styles.title}>Mac Miller</Text>
-                <Text style={styles.subTitle}>5 Listings</Text>
+                <AppText textStyle={styles.title}>{title}</AppText>
+                <AppText textStyle={styles.subTitle}>{subTitle}</AppText>
             </View>  
         </View>
     );
 }
 
-export default UserCard;
+export default ListItem;
 
 //You will normally use a combination of flexDirection, alignItems, and justifyContent to achieve the right layout.
 
@@ -31,11 +32,12 @@ const styles = StyleSheet.create({
     image: {
         width: 70,
         height: 70,
-        borderRadius: 35
+        borderRadius: 35,
+        marginRight: 10
     },
     secondaryContainer: {
         width: "100%",
-        padding: 12,
+        padding: 5,
     },
     title:{
         fontSize: 18,
@@ -45,7 +47,7 @@ const styles = StyleSheet.create({
     },
     subTitle:{
         fontSize: 18,
-        color: Colors.grey,
+        color: Colors.medium,
         fontWeight: "400",
         margin: 2
     }

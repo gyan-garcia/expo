@@ -2,16 +2,22 @@ import React from 'react';
 import { View, StyleSheet, Image, Text } from 'react-native';
 
 import Colors from '../config/Colors';
-import UserCard from '../components/UserCard';
+import ListItem from '../components/ListItem';
+import AppText from '../components/AppText';
 
 function ListingDetailsScreen(props) {
     return (
         <View style={styles.container}> 
             <Image style={styles.image} source={require('../assets/jacket.jpg')}/>
             <View style={styles.subContainer}>
-                <Text style={styles.title}>Red Jacket for sale</Text>
-                <Text style={styles.subTitle}>$100</Text>
-                <UserCard/>
+                <AppText textStyle={styles.title}>Red Jacket for sale</AppText>
+                <AppText textStyle={styles.price}>$100</AppText>
+                <View style={styles.userContainer}> 
+                    <ListItem
+                        image={require('../assets/mac-miller.jpg')}
+                        title='Mac Miller'
+                        subTitle='5 Listings' />
+                </View>
             </View>
         </View>
     );
@@ -25,22 +31,24 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.white
     },
     image:{
-        height: 240,
+        height: 300,
         width: "100%"
     },
     subContainer:{
         padding: 20,
     },
     title:{
-        fontSize: 22,
-        fontWeight: "600",
+        fontSize: 24,
+        fontWeight: "500",
         color: Colors.black,
-        margin: 5
     },
-    subTitle:{
-        fontSize: 18,
+    price:{
+        fontSize: 20,
         fontWeight: "500",
         color: Colors.secondary,
-        margin: 5
+        marginVertical: 10
+    },
+    userContainer:{
+        marginVertical: 30
     }
 })
