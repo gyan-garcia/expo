@@ -3,5 +3,8 @@ export default{
     secondary: '#4ecdc4',
     black: "#000",
     white: "#fff",
-    medium: "#6e6969"
+    medium: "#6e6969",
+    light: "#c8c4c4",
+    itemPressLight: "#f8f4f4",
+    danger: '#ff5252'
 };

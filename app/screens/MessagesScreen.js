@@ -1,10 +1,12 @@
-import React from 'react';
-import { FlatList, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { FlatList, StyleSheet, View } from 'react-native';
 
 import ListItem from '../components/ListItem';
 import Screen from '../components/Screen';
+import ListItemSeparator from '../components/ListItemSeparator';
+import ListItemDeleteAction from '../components/ListItemDeleteAction';
 
-const messages = [
+const initialMessages = [
     {
         id: 1,
         title: 'T1',
@@ -18,7 +20,7 @@ const messages = [
         image: require('../assets/mac-miller.jpg')
     },
     {
-        id: 3,
+        id: 3, 
         title: 'T3',
         description: 'D1',
         image: require('../assets/mac-miller.jpg')
@@ -26,12 +28,23 @@ const messages = [
 ];
 
 function MessagesScreen(props) {
+    // State functions for the function component
 
-    //console.log("log >>>>" + Constants);
+    const [messages, setMessages] = useState(initialMessages);  // <-- This returns an array. Postion 0 is the object, and position 1 is the method to upadte the object.
+    const [refreshing, setRefreshing] = useState(false); // A bool state variable
+
+    const handleDelete = message => {
+        // Delete the message from the messages array.
+        setMessages(messages.filter( m => m.id !== message.id));
+
+        // Notify the server so the message is deleted from the backend
+        //...
+    };
+
+
+
 
     return (
-        // SafeAreView only works for iPhone, for Android we need to add platform specific code. 
-
         <Screen>
             <FlatList
                 data = {messages}
@@ -40,7 +53,22 @@ function MessagesScreen(props) {
                     <ListItem 
                         title = {item.title}
                         subTitle = {item.description}
-                        image = { item.image } /> } /> 
+                        image = { item.image } 
+                        onPress = { () => console.log('messsage selected: ' , item) }
+                        renderRightActions = { () => 
+                            <ListItemDeleteAction onPress = {() => handleDelete(item)} /> } 
+                    /> 
+                } 
+                ItemSeparatorComponent = { ListItemSeparator }
+                refreshing = {refreshing}
+                onRefresh = { () => setMessages([    
+                    {
+                        id: 4, 
+                        title: 'T4',
+                        description: 'D4',
+                        image: require('../assets/mac-miller.jpg')
+                    }]) }
+            /> 
         </Screen>);
 }
 
