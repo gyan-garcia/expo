@@ -6,6 +6,7 @@ import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
 import Card from './app/components/Card';
 import MessagesScreen from './app/screens/MessagesScreen';
+import MyAccountScreen from './app/screens/MyAccountScreen';
 //import AppButton from './app/components/AppButton'
 
 // Note, check that if I wanto to have an specific OS implementation for a components
@@ -20,7 +21,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function App() {
   return (
-    <MessagesScreen/>
+    <MyAccountScreen/>
     
   );
 }

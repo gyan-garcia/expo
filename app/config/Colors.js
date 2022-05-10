@@ -4,7 +4,8 @@ export default{
     black: "#000",
     white: "#fff",
     medium: "#6e6969",
-    light: "#c8c4c4",
+    light: "#e8e4e4",
     itemPressLight: "#f8f4f4",
-    danger: '#ff5252'
+    danger: '#ff5252',
+    yellow: '#ffe66d'
 };
