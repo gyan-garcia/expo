@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
@@ -8,6 +9,7 @@ import Card from './app/components/Card';
 import MessagesScreen from './app/screens/MessagesScreen';
 import MyAccountScreen from './app/screens/MyAccountScreen';
 import ListingsScreen from './app/screens/ListingsScreen';
+import AccountScreen from './app/screens/AccountScreen';
 
 //import AppButton from './app/components/AppButton'
 
@@ -16,9 +18,6 @@ import ListingsScreen from './app/screens/ListingsScreen';
 // correct one depending on the platform. This is useful if I want to have specific logic. Otherwise I should jus
 // use ...Platform.select inside the component styles.
 //import AppText from './app/components/AppText';
-
-
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
 export default function App() {

@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
                 fontFamily: "Roboto"
             },
             web: {
-                fontFamily: "Avenir"
+                fontFamily: "Helvetica"
             }, 
         })
     }, 
