@@ -1,5 +1,7 @@
+import React, { useState } from 'react';
+
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import WelcomeScreen from './app/screens/WelcomeScreen';
@@ -10,6 +12,9 @@ import MessagesScreen from './app/screens/MessagesScreen';
 import MyAccountScreen from './app/screens/MyAccountScreen';
 import ListingsScreen from './app/screens/ListingsScreen';
 import AccountScreen from './app/screens/AccountScreen';
+import Screen from './app/components/Screen';
+import AppTextInput from './app/components/AppTextInput';
+
 
 //import AppButton from './app/components/AppButton'
 
@@ -21,8 +26,13 @@ import AccountScreen from './app/screens/AccountScreen';
 
 
 export default function App() {
+  // if I just adde the property secureTextEntry, is the same as 
+  // typing secureTextEntry = {true}
+
   return (
-    <ListingsScreen/>
+    <Screen>
+      <AppTextInput icon='email' placeholder='User Name'/>
+    </Screen>
     
   );
 }

@@ -7,5 +7,6 @@ export default{
     light: "#e8e4e4",
     itemPressLight: "#f8f4f4",
     danger: '#ff5252',
-    yellow: '#ffe66d'
+    yellow: '#ffe66d',
+    dark: '#0c0c0c'
 };

@@ -55,8 +55,8 @@ function ListingsScreen(props) {
                 onRefresh = { () => setListings([    
                     {
                         id: 4, 
-                        title: 'T4',
-                        subtitle: 'D4',
+                        title: 'Tattos for sale',
+                        subtitle: '300',
                         image: require('../assets/mac-miller.jpg')
                     }]) }
             /> 

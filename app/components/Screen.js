@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     screen: {
         paddingTop: Constants.statusBarHeight,
         flex: 1, // So wherever used this component takes the whole screen.
-        backgroundColor: Colors.light,
+        backgroundColor: Colors.white,
     }
 })
 
