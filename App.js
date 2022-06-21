@@ -1,5 +1,8 @@
+import React, { useState } from 'react';
+
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
@@ -7,6 +10,12 @@ import ViewImageScreen from './app/screens/ViewImageScreen';
 import Card from './app/components/Card';
 import MessagesScreen from './app/screens/MessagesScreen';
 import MyAccountScreen from './app/screens/MyAccountScreen';
+import ListingsScreen from './app/screens/ListingsScreen';
+import AccountScreen from './app/screens/AccountScreen';
+import Screen from './app/components/Screen';
+import AppTextInput from './app/components/AppTextInput';
+
+
 //import AppButton from './app/components/AppButton'
 
 // Note, check that if I wanto to have an specific OS implementation for a components
@@ -16,12 +25,14 @@ import MyAccountScreen from './app/screens/MyAccountScreen';
 //import AppText from './app/components/AppText';
 
 
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-
-
 export default function App() {
+  // if I just adde the property secureTextEntry, is the same as 
+  // typing secureTextEntry = {true}
+
   return (
-    <MyAccountScreen/>
+    <Screen>
+      <AppTextInput icon='email' placeholder='User Name'/>
+    </Screen>
     
   );
 }

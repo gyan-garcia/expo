@@ -7,6 +7,7 @@ import ListItem from '../components/ListItem';
 import AppText from '../components/AppText'
 import Colors from '../config/Colors';
 import SectionHeader from '../components/SectionHeader';
+import Icon from '../components/Icon';
 
 function MyAccountScreen(props) {
     return (

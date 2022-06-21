@@ -28,12 +28,12 @@ const styles = StyleSheet.create({
         overflow: 'hidden' // With this property the child elements won't get out of the layout. 
     },
     photo:{
-        height: 200,
+        height: "75%",
         width: "100%",
     },
     textContainer: {
         flex: 1,
-        padding: 12,
+        padding: 10,
     },
     description: {
         margin: 1
