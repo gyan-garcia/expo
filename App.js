@@ -24,17 +24,30 @@ import AppPicker from './app/components/AppPicker';
 // use ...Platform.select inside the component styles.
 //import AppText from './app/components/AppText';
 
+// Temp code just for testing
+const categories = [
+  { label: 'Furniture', value: 1 },
+  { label: 'Clothing', value: 2 },
+  { label: 'Cameras', value: 3 },
+];
+
 
 export default function App() {
   // if I just adde the property secureTextEntry, is the same as 
   // typing secureTextEntry = {true}
   const [isNew, setIsNew] = useState(false);
 
+  // A variable where to store the current selection
+  const [category, setCategory] = useState(categories[0]);
+
   return (
     <Screen>
       <AppTextInput icon='email' placeholder='User Name yo'/>
       <Switch vaule={isNew} onValueChange = {(newValue) => setIsNew(newValue)}/>
-      <AppPicker icon='apps' placeholder='Category' />
+      <AppPicker
+        selectedItem = {category}
+        onSelectItem = { item => setCategory(item)} 
+        items = {categories} icon='apps' placeholder='Category' />
     </Screen>
     
   );
