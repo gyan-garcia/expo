@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Switch } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import WelcomeScreen from './app/screens/WelcomeScreen';
@@ -14,7 +14,7 @@ import ListingsScreen from './app/screens/ListingsScreen';
 import AccountScreen from './app/screens/AccountScreen';
 import Screen from './app/components/Screen';
 import AppTextInput from './app/components/AppTextInput';
-
+import AppPicker from './app/components/AppPicker';
 
 //import AppButton from './app/components/AppButton'
 
@@ -28,10 +28,13 @@ import AppTextInput from './app/components/AppTextInput';
 export default function App() {
   // if I just adde the property secureTextEntry, is the same as 
   // typing secureTextEntry = {true}
+  const [isNew, setIsNew] = useState(false);
 
   return (
     <Screen>
-      <AppTextInput icon='email' placeholder='User Name'/>
+      <AppTextInput icon='email' placeholder='User Name yo'/>
+      <Switch vaule={isNew} onValueChange = {(newValue) => setIsNew(newValue)}/>
+      <AppPicker icon='apps' placeholder='Category' />
     </Screen>
     
   );
